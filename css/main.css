@@ -1165,9 +1165,17 @@ a {
 .album-item a:hover .album-thumb img {
   transform: scale(1.1);
 }
-.album-thumb {
+/* .album-thumb {
   margin-bottom: 10px;
   overflow: hidden;
+} */
+.album-thumb {
+  height: 200px;               /* altura fixa do card */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;            /* corta excesso */
+  border-radius: 6px;
 }
 /* .album-thumb img {
   width: 100%;
@@ -1175,7 +1183,6 @@ a {
   display: block;
   transition: transform 1s ease;
 } */
-
 .album-thumb img {
   max-width: 350px; /* controla a largura máxima */
   height: auto;     /* mantém a proporção */
@@ -1184,7 +1191,6 @@ a {
   transition: transform 1s ease;
   margin: 0 auto;
 }
-
 .album-name {
   font-size: 22px;
   font-weight: 500;
