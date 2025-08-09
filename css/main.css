@@ -1132,8 +1132,15 @@ a {
 .grid-album {
   display: none;
 }
-.grid-album.is-active {
+/* .grid-album.is-active {
   display: block;
+} */
+
+.grid-album.is-active {
+  display: flex;              /* agora usa flexbox */
+  flex-wrap: wrap;            /* quebra linhas */
+  justify-content: center;    /* centraliza última linha */
+  gap: 15px;                  /* espaço uniforme entre itens */
 }
 
 .album-tab {
@@ -1165,10 +1172,6 @@ a {
 .album-item a:hover .album-thumb img {
   transform: scale(1.1);
 }
-/* .album-thumb {
-  margin-bottom: 10px;
-  overflow: hidden;
-} */
 /* Album START — ajuste de miniaturas */
 .album-thumb {
   height: 200px;              /* altura fixa do espaço da thumb */
