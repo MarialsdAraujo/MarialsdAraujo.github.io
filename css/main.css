@@ -1304,36 +1304,52 @@ a {
 #skills .title { margin-bottom: 6px; }
 #skills .subtitle p { opacity: .9; }
 
-.skills-grid .skill-card{
-  background: rgba(255,255,255,0.03);
-  border:1px solid rgba(255,255,255,0.12);
-  border-radius:16px;
-  padding:22px 20px;
-  box-shadow:0 8px 24px rgba(0,0,0,.15);
-}
-.skill-heading{font-size:20px;margin:0 0 14px;}
+/* 1) Cards mais largos só no SKILLS (3 por linha no desktop) */
+#skills .grid-single .grid-sizer,
+#skills .grid-single .grid-item { width: calc(33.333% - 15px); }
 
-.icons-grid{
-  display:grid;
-  grid-template-columns: repeat(3, minmax(120px,1fr));
-  gap:22px;
-  justify-items:center;
-  align-items:start;
+@media (max-width: 1024px) {
+  #skills .grid-single .grid-sizer,
+  #skills .grid-single .grid-item { width: calc(50% - 15px); }
 }
-.icon-item{text-align:center}
-.icon-circle{
-  width:72px;height:72px;border-radius:50%;
-  background:rgba(255,255,255,.06);
-  display:flex;align-items:center;justify-content:center;
-  box-shadow:0 8px 24px rgba(0,0,0,.18);
-  margin:0 auto 8px;
+@media (max-width: 640px) {
+  #skills .grid-single .grid-sizer,
+  #skills .grid-single .grid-item { width: 100%; }
 }
-.icon-circle i{font-size:36px;line-height:1}
-.icon-label{font-size:14px;opacity:.95}
 
-/* Responsive tweaks for Skills */
-@media (max-width:1024px){ .icons-grid{ grid-template-columns: repeat(2, minmax(120px,1fr)); } }
-@media (max-width:640px){  .icons-grid{ grid-template-columns: repeat(2, minmax(110px,1fr)); } }
+/* 2) Não cortar conteúdo dentro dos cards de skills */
+#skills .grid-single .grid-item { overflow: visible; }
+
+/* 3) Tirar bullets totalmente e remover recuos */
+.icons-grid { 
+  list-style: none; 
+  padding: 0; 
+  margin: 0; 
+}
+.icons-grid li { list-style: none; padding: 0; margin: 0; }
+.icons-grid li::marker { content: ''; }  /* Safari/Edge */
+
+/* 4) Grade de ícones que se adapta ao espaço do card */
+.icons-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(110px, 1fr)); /* 3 colunas no desktop */
+  gap: 16px 20px;
+  justify-items: center;
+  align-items: start;
+}
+@media (max-width: 1024px) {
+  .icons-grid { grid-template-columns: repeat(2, minmax(110px, 1fr)); }
+}
+
+/* 5) Textos podem quebrar linha sem cortar */
+.icon-label {
+  display: block;
+  font-size: 14px;
+  white-space: normal;
+  word-break: break-word;
+  overflow: visible;
+  text-align: center;
+}
 /* Skills END */
 
 
