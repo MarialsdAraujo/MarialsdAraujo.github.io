@@ -1310,11 +1310,11 @@ a {
 #skills .grid-single .grid-sizer,
 #skills .grid-single .grid-item { width: calc(33.333% - 15px); }  /* 3 por linha */
 
-/* @media (max-width: 1024px){
+@media (max-width: 1024px){
   #skills .grid-single .grid-sizer,
   #skills .grid-single .grid-item { width: calc(50% - 15px); }    /* 2 por linha */
 }
-@media (max-width: 640px){
+/* @media (max-width: 640px){
   #skills .grid-single .grid-sizer,
   #skills .grid-single .grid-item { width: 100%; }                 /* 1 por linha */
 } */
