@@ -1743,3 +1743,27 @@ a {
 /* Safety: keep menu links above any accidental layer */
 .menu-nav a { position: relative; z-index: 12; }
 /* Responsive END */
+
+/* ===== SKILLS: use CSS Grid (no Masonry) ===== */
+#skills .skills-grid{
+  display: grid;
+  grid-template-columns: repeat(3, minmax(280px, 1fr));
+  gap: 22px;
+}
+
+/* neutralize Masonry/float styles ONLY in Skills */
+#skills .skills-grid .grid-item,
+#skills .skills-grid .grid-sizer{
+  float: none;
+  width: auto;
+  margin: 0;
+}
+#skills .skills-grid .grid-sizer{ display: none; }
+#skills .skills-grid .grid-item{ position: static !important; overflow: visible; }
+
+@media (max-width: 1024px){
+  #skills .skills-grid{ grid-template-columns: repeat(2, minmax(260px, 1fr)); }
+}
+@media (max-width: 640px){
+  #skills .skills-grid{ grid-template-columns: 1fr; }
+}
