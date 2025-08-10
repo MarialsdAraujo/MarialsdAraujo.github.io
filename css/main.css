@@ -1,5 +1,4 @@
 /* Fonts START */
-/* Fonts START */
 @font-face {
   font-family: 'Roboto';
   src: local('Roboto Bold'), local('Roboto-Bold'),
@@ -1695,3 +1694,41 @@ a {
 /* Safety: keep menu links above any accidental layer */
 .menu-nav a { position: relative; z-index: 12; }
 /* Responsive END */
+
+/* ===== Skills layout fix (override) ===== */
+
+/* tira as bolinhas e resets da lista */
+.icons-grid,
+.icons-grid .icon-item {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* deixa os cards de skills exibirem tudo (sem corte do pai .grid-item) */
+.skills-grid .grid-item {
+  overflow: visible; /* override do .grid-single .grid-item { overflow:hidden } */
+}
+
+/* grade de ícones que se adapta ao espaço do card */
+.icons-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(110px, 1fr)); /* auto-ajusta 2 ou 3 colunas */
+  gap: 16px;
+  justify-items: center;
+  align-items: start;
+}
+
+.icon-item { text-align: center; }
+.icon-circle { margin: 0 auto 8px; }
+.icon-label { 
+  font-size: 14px; 
+  opacity: .95; 
+  white-space: normal;      /* pode quebrar linha quando precisar */
+  overflow: visible;        /* evita corte de texto */
+}
+
+/* em telas bem largas, pode forçar 3 colunas por card */
+@media (min-width: 1400px) {
+  .icons-grid { grid-template-columns: repeat(3, minmax(110px, 1fr)); }
+}
