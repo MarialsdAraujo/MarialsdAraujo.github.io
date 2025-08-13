@@ -1182,7 +1182,7 @@ a {
 }
 /* Album START — ajuste de miniaturas */
 .album-thumb {
-  height: 200px;              /* altura fixa do espaço da thumb */
+  height: 240px;              /* altura fixa do espaço da thumb */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1205,7 +1205,13 @@ a {
   color: #c8c6c6;
   margin-bottom: 20px;
 }
-
+/* Project grid tweaks */
+.album-thumb video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
 .grid-album::after {
   content: '';
   display: block;
@@ -1222,6 +1228,7 @@ a {
   z-index: 0;
   overflow: hidden;
 }
+
 /* Album END */
 
 /* Gallery START */
