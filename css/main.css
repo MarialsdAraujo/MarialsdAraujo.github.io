@@ -1182,7 +1182,7 @@ a {
 }
 /* Album START — ajuste de miniaturas */
 .album-thumb {
-  height: 240px;              /* altura fixa do espaço da thumb */
+  height: 200px;              /* altura fixa do espaço da thumb */
   display: flex;
   align-items: center;
   justify-content: center;
