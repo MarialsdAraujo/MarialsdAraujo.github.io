@@ -806,7 +806,7 @@ a {
 }
 .banner-item {
   height: calc(100vh - 140px);
-  padding: 150px 70px 70px 70px;
+  padding: 110px 70px 70px 70px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -1543,7 +1543,7 @@ a {
     padding: 30px 30px 30px 0;
   }
   .banner-item {
-    padding: 150px 50px 70px 50px;
+    padding: 110px 50px 70px 50px;
     height: auto;
   }
   .banner-nav-wrap {
@@ -1609,7 +1609,7 @@ a {
     line-height: 42px;
   }
   .banner-item {
-    padding: 100px 40px 150px 40px;
+    padding: 50px 40px 150px 40px;
     height: calc(100vh - 52px);
     background-position: center center;
   }
@@ -1736,7 +1736,7 @@ a {
 
   /* Banner 480 START */
   .banner-item {
-    padding: 60px 30px 100px 30px;
+    padding: 16px 30px 100px 30px;
   }
   .banner-nav-wrap {
     width: 100%;
