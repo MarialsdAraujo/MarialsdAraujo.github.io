@@ -462,7 +462,7 @@ a {
   z-index: 1;
 }
 .sidebar-logo img {
-  max-width: 47px;
+  max-width: 70px;
 }
 .menu-wrap {
   position: fixed;
@@ -680,7 +680,7 @@ a {
 }
 
 .sidebar .logo img {
-  width: 47px;
+  width: 70px;
   display: block;
 }
 
@@ -1705,7 +1705,7 @@ a {
     left: 25px;
   }
   .sidebar .logo img {
-    width: 40px;
+    width: 70px;
   }
   .sidebar .hamburger-button span:nth-last-child(n+2) {
     margin-bottom: 9px;
